@@ -1,0 +1,255 @@
+@import url(https://fonts.google.com/specimen/Poppins);
+body {
+  margin: 0px; }
+
+.container {
+  margin: 0 auto;
+  max-width: 1110px;
+  position: relative; }
+
+.shortly-navbar {
+  padding-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+  .shortly-navbar ul {
+    margin: 0;
+    padding: 0;
+    list-style: none; }
+  .shortly-navbar li {
+    display: inline-block; }
+  .shortly-navbar a {
+    display: block;
+    padding: 6px 12px;
+    text-decoration: none;
+    color: black; }
+  .shortly-navbar img {
+    vertical-align: middle; }
+  .shortly-navbar button {
+    border-radius: 25px;
+    background-color: #2acfcf;
+    color: white;
+    width: 100px;
+    height: 35px;
+    border: 2px solid #2acfcf; }
+
+.shortly-header {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  margin: 75px 0 150px 0; }
+  .shortly-header--info {
+    margin-right: 10px; }
+  .shortly-header h1 {
+    display: inline;
+    font-family: "Poppins", serif;
+    font-size: 50px; }
+  .shortly-header p {
+    font-size: 16px;
+    opacity: 0.6; }
+  .shortly-header button {
+    background-color: #2acfcf;
+    border-radius: 25px;
+    border: 2px solid;
+    color: white;
+    height: 55px;
+    width: 192px; }
+  .shortly-header img {
+    height: auto;
+    max-width: 100%; }
+
+.shortly-body__background {
+  background-color: #bfbfbf; }
+
+.shortly-body__form {
+  position: absolute;
+  width: 100%;
+  top: -80px;
+  background-color: #3b3054;
+  background-image: url("../images/bg-shorten-desktop.svg");
+  border-radius: 10px;
+  border: 2px transparent;
+  display: flex;
+  height: 160px;
+  max-width: 1110px; }
+  .shortly-body__form__body {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    width: 100%; }
+    .shortly-body__form__body .url {
+      height: 60px;
+      width: 60%; }
+      .shortly-body__form__body .url .input {
+        border-radius: 7px;
+        border: 2px solid white;
+        box-sizing: border-box;
+        height: 90%;
+        padding-left: 10px;
+        width: 90%;
+        outline: none; }
+      .shortly-body__form__body .url .input--failed {
+        border-color: red; }
+    .shortly-body__form__body .button {
+      height: 60px;
+      width: 20%; }
+      .shortly-body__form__body .button input {
+        background-color: #2acfcf;
+        border-radius: 7px;
+        border: 2px solid #2acfcf;
+        box-sizing: border-box;
+        color: white;
+        height: 90%;
+        width: 90%;
+        outline: none;
+        box-shadow: none; }
+
+.shortly-body__items-container {
+  display: flex;
+  max-width: 1110px;
+  flex-direction: column; }
+
+.shortly-body__items {
+  background-color: white;
+  border-radius: 7px;
+  border: 2px transparent;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  height: auto;
+  max-width: 1110px;
+  margin: 25px 10px 0 10px; }
+  .shortly-body__items .input {
+    margin: 0 35px; }
+  .shortly-body__items .output {
+    display: flex; }
+    .shortly-body__items .output .shortend-link {
+      margin: 0 10px;
+      color: #2acfcf;
+      text-decoration: none;
+      align-self: center; }
+    .shortly-body__items .output .button {
+      margin: 0 30px;
+      background-color: #2acfcf;
+      border-radius: 7px;
+      border: 2px solid #2acfcf;
+      box-sizing: border-box;
+      color: white;
+      width: 100px;
+      height: 35px;
+      outline: none;
+      box-shadow: none; }
+    .shortly-body__items .output .button--active {
+      background-color: #3b3054;
+      border-color: #3b3054; }
+    .shortly-body__items .output .br {
+      display: none; }
+
+.shortly-body__info {
+  padding: 125px 0 120px 0;
+  text-align: center; }
+  .shortly-body__info h3 {
+    font-size: 50px; }
+  .shortly-body__info p {
+    opacity: 0.6;
+    font-size: 20px; }
+
+.shortly-signup__background {
+  background-image: url("../images/bg-shorten-desktop.svg");
+  background-color: #3b3054;
+  background-size: 100% 100%; }
+
+.shortly-signup {
+  padding: 65px 0 50px 0;
+  text-align: center; }
+  .shortly-signup h1 {
+    color: white;
+    margin-bottom: 30px; }
+  .shortly-signup button {
+    border-radius: 25px;
+    background-color: #2acfcf;
+    color: white;
+    width: 200px;
+    height: 60px;
+    border: 2px solid #2acfcf; }
+
+.shortly-footer__background {
+  background-color: #232127; }
+
+.shortly-footer {
+  padding: 65px 0 70px 0;
+  display: flex;
+  justify-content: space-between; }
+  .shortly-footer p {
+    margin: 0 0 1em 0;
+    color: white;
+    font-weight: bold; }
+  .shortly-footer a {
+    display: block;
+    padding-bottom: 0.5em;
+    text-decoration: none;
+    color: white;
+    opacity: 0.6; }
+  .shortly-footer .filter-white {
+    vertical-align: middle;
+    filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(233deg) brightness(101%) contrast(104%); }
+  .shortly-footer__features {
+    display: flex;
+    flex-direction: column;
+    justify-content: start; }
+  .shortly-footer__resources {
+    display: flex;
+    flex-direction: column;
+    justify-content: start; }
+  .shortly-footer__company {
+    display: flex;
+    flex-direction: column;
+    justify-content: start; }
+  .shortly-footer__social {
+    display: flex; }
+    .shortly-footer__social .logo {
+      padding: 0 10px; }
+
+@media screen and (max-width: 600px) {
+  .shortly-header {
+    flex-direction: column-reverse;
+    padding: 0 10px;
+    text-align: center;
+    align-items: center; }
+    .shortly-header__info {
+      padding: 20px 0; }
+
+  .shortly-body__form__body {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    padding: 0 10px; }
+    .shortly-body__form__body .url, .shortly-body__form__body .button {
+      width: 100%; }
+
+  .shortly-footer {
+    flex-direction: column;
+    text-align: center;
+    align-items: center; }
+    .shortly-footer__features, .shortly-footer__resources, .shortly-footer__company, .shortly-footer__social {
+      padding-top: 50px; }
+
+  .shortly-body__items {
+    flex-direction: column; }
+    .shortly-body__items .output {
+      width: 100%;
+      align-items: center;
+      text-align: center;
+      flex-direction: column;
+      padding-bottom: 10px; }
+      .shortly-body__items .output .button {
+        margin-top: 10px; }
+      .shortly-body__items .output .br {
+        display: block;
+        width: 100%;
+        border-width: 0.5px;
+        border-color: #9e9aa7; } }
+
+/*# sourceMappingURL=styles.css.map */
