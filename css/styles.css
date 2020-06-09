@@ -1,4 +1,4 @@
-@import url("https://fonts.google.com/specimen/Poppins");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap");
 body {
   margin: 0px; }
 
@@ -22,8 +22,7 @@ body {
   .shortly-navbar a {
     color: black;
     display: block;
-    font-family: Poppins;
-    font-weight: 700;
+    font: 700  'Poppins';
     padding: 6px 12px;
     text-decoration: none; }
     .shortly-navbar a:hover {
@@ -35,10 +34,10 @@ body {
     border-radius: 25px;
     border: 2px solid #2acfcf;
     color: white;
-    font-family: Poppins;
-    font-weight: 700;
+    font: 700 'Poppins';
     height: 35px;
-    width: 100px; }
+    width: 100px;
+    outline: none; }
     .shortly-navbar button:hover {
       background-color: #91f8ea;
       border-color: #91f8ea; }
@@ -57,22 +56,20 @@ body {
     margin-right: 10px; }
   .shortly-header h1 {
     display: inline;
-    font-family: Poppins;
+    font-family: 'Poppins';
     font-weight: 700; }
   .shortly-header p {
-    font-family: Poppins;
-    font-size: 16px;
-    font-weight: 700;
+    font: 400 20px/1 'Poppins';
     opacity: 0.6; }
   .shortly-header button {
     background-color: #2acfcf;
     border-radius: 25px;
     border: 2px solid;
     color: white;
-    font-family: Poppins;
-    font-weight: 700;
+    font: 700 20px/1 'Poppins';
     height: 55px;
-    width: 192px; }
+    width: 192px;
+    outline: none; }
     .shortly-header button:hover {
       background-color: #91f8ea;
       border-color: #91f8ea; }
@@ -107,12 +104,12 @@ body {
         border-radius: 7px;
         border: 2px solid white;
         box-sizing: border-box;
-        font-family: Poppins;
-        font-weight: 700;
+        font: 700  'Poppins';
         height: 90%;
         outline: none;
         padding-left: 10px;
-        width: 90%; }
+        width: 90%;
+        outline: none; }
       .shortly-body__form__body .url .input--failed {
         border-color: red; }
     .shortly-body__form__body .button1 {
@@ -125,8 +122,7 @@ body {
         box-shadow: none;
         box-sizing: border-box;
         color: white;
-        font-family: Poppins;
-        font-weight: 700;
+        font: 400 'Poppins';
         height: 90%;
         outline: none;
         width: 90%; }
@@ -158,8 +154,7 @@ body {
     .shortly-body__items .output .shortend-link {
       align-self: center;
       color: #2acfcf;
-      font-family: Poppins;
-      font-weight: 700;
+      font: 400 'Poppins';
       margin: 0 10px;
       text-decoration: none; }
     .shortly-body__items .output .button {
@@ -169,12 +164,15 @@ body {
       box-shadow: none;
       box-sizing: border-box;
       color: white;
-      font-family: Poppins;
-      font-weight: 700;
+      font: 700 'Poppins';
       height: 35px;
       margin: 0 30px;
       outline: none;
-      width: 100px; }
+      width: 100px;
+      outline: none; }
+      .shortly-body__items .output .button:hover {
+        background-color: #91f8ea;
+        border-color: #91f8ea; }
     .shortly-body__items .output .button--active {
       background-color: #3b3054;
       border-color: #3b3054; }
@@ -201,9 +199,7 @@ body {
   .shortly-body__info h3 {
     font: 700 50px/1 'Poppins'; }
   .shortly-body__info p {
-    font-family: Poppins;
-    font-size: 20px;
-    font-weight: 700;
+    font: 400 20px/1 'Poppins';
     opacity: 0.6; }
   .shortly-body__info__items {
     display: flex;
@@ -236,11 +232,14 @@ body {
         .shortly-body__info__items .box-1 .icon .specific-img {
           margin-top: 25px; }
       .shortly-body__info__items .box-1 .header {
-        font-size: 25px;
+        font-size: 20px;
         font-weight: bolder;
-        margin: 70px 10px 20px 10px; }
+        font-family: Poppins;
+        margin: 70px 10px 20px 10px;
+        font: 20px 700 poppins; }
       .shortly-body__info__items .box-1 .body {
-        margin: 0 10px; }
+        margin: 0 10px;
+        font: 400 20px/1 'Poppins'; }
     .shortly-body__info__items .box-2 {
       background-color: white;
       border-radius: 10px;
@@ -264,11 +263,14 @@ body {
         .shortly-body__info__items .box-2 .icon .specific-img {
           margin-top: 25px; }
       .shortly-body__info__items .box-2 .header {
-        font-size: 25px;
+        font-size: 20px;
         font-weight: bolder;
-        margin: 70px 10px 20px 10px; }
+        font-family: Poppins;
+        margin: 70px 10px 20px 10px;
+        font: 20px 700 poppins; }
       .shortly-body__info__items .box-2 .body {
-        margin: 0 10px; }
+        margin: 0 10px;
+        font: 400 20px/1 'Poppins'; }
     .shortly-body__info__items .box-3 {
       background-color: white;
       border-radius: 10px;
@@ -292,11 +294,14 @@ body {
         .shortly-body__info__items .box-3 .icon .specific-img {
           margin-top: 25px; }
       .shortly-body__info__items .box-3 .header {
-        font-size: 25px;
+        font-size: 20px;
         font-weight: bolder;
-        margin: 70px 10px 20px 10px; }
+        font-family: Poppins;
+        margin: 70px 10px 20px 10px;
+        font: 20px 700 poppins; }
       .shortly-body__info__items .box-3 .body {
-        margin: 0 10px; }
+        margin: 0 10px;
+        font: 400 20px/1 'Poppins'; }
 
 .shortly-signup__background {
   background-color: #3b3054;
@@ -308,18 +313,17 @@ body {
   text-align: center; }
   .shortly-signup h1 {
     color: white;
-    font-family: Poppins;
-    font-weight: 700;
+    font: 700 20px/1 'Poppins';
     margin-bottom: 30px; }
   .shortly-signup button {
     background-color: #2acfcf;
     border-radius: 25px;
     border: 2px solid #2acfcf;
     color: white;
-    font-family: Poppins;
-    font-weight: 700;
+    font: 400 'Poppins';
     height: 60px;
-    width: 200px; }
+    width: 200px;
+    outline: none; }
     .shortly-signup button:hover {
       background-color: #91f8ea;
       border-color: #91f8ea; }
@@ -329,15 +333,14 @@ body {
 
 .shortly-footer {
   display: flex;
-  font-family: Poppins;
-  font-weight: 700;
   justify-content: space-between;
   padding: 65px 10px 70px 10px; }
   .shortly-footer p {
     color: white;
-    font-weight: bold;
+    font: 700 'Poppins';
     margin: 0 0 1em 0; }
   .shortly-footer a {
+    font: 400 'Poppins';
     color: white;
     display: block;
     opacity: 0.6;
@@ -399,17 +402,15 @@ body {
         border-radius: 25px;
         border: 2px solid #2acfcf;
         color: white;
-        font-family: Poppins;
-        font-size: 16px;
-        font-weight: bold;
+        font: 700 16px/1 'Poppins';
         height: 50px;
         margin: 20px 0 10px 0;
-        width: 90%; }
+        width: 90%;
+        outline: none; }
       .shortly-navbar__mobile .shortly-navbar__mobile__body a {
         color: white;
         display: block;
-        font-family: Poppins;
-        font-weight: 700;
+        font: 700 'Poppins';
         margin-top: 20px;
         padding: 6px 12px;
         text-decoration: none; }
