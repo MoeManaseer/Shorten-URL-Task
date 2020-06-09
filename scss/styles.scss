@@ -1,6 +1,7 @@
-@import url(https://fonts.google.com/specimen/Poppins);
+@import url("https://fonts.google.com/specimen/Poppins");
 
 $cyan : hsl(180, 66%, 49%);
+$bright-cyan  : hsl(172, 88%, 77%);
 $dark-blue : hsl(255, 11%, 22%);
 $dark-violet: hsl(257, 27%, 26%);
 $gray : hsl(0, 0%, 75%);
@@ -8,6 +9,61 @@ $grayish-violet : hsl(257, 7%, 63%);
 $red : hsl(0, 87%, 67%);
 $very-dark-violet : hsl(260, 8%, 14%);
 $font : 'Poppins', serif;
+
+@mixin hover-button {
+    &:hover {
+        background-color: $bright-cyan;
+        border-color: $bright-cyan;
+    }
+}
+
+@mixin hover-text {
+    &:hover {
+        color: $cyan;
+    }
+}
+
+@mixin items-margin ($margin) {
+    margin-top: $margin;
+}
+
+@mixin box {
+    background-color: white;
+    border-radius: 10px;
+    border: 2px solid white;
+    height: 255px;
+    position: relative;
+    width: 340px;
+    z-index: 1;
+
+    .icon {
+        background-color: $dark-violet;
+        border-radius: 50px;
+        height: 90px;
+        left: 30px;
+        position: absolute;
+        text-align: center;
+        top: -45px;
+        width: 90px;
+
+        img {
+            margin-top: 20px;
+        }
+
+        .specific-img {
+            margin-top: 25px;
+        }
+    }
+
+    .header {
+        font-size: 25px;
+        font-weight: bolder;
+        margin: 70px 10px 20px 10px;
+    }
+    .body {
+        margin: 0 10px;
+    }
+}
 
 body{
     margin: 0px;
@@ -20,62 +76,92 @@ body{
 }
 
 .shortly-navbar {
-    padding-top: 10px;
+    align-items: center;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    padding-right: 10px;;
+    padding-top: 10px;
+
     ul {
+        list-style: none;
         margin: 0;
         padding: 0;
-        list-style: none;
     }
+
     li {
         display: inline-block;
     }
+
     a  {
+        @include hover-text();
+        color: black;
         display: block;
+        font-family: Poppins;
+        font-weight: 700;
         padding: 6px 12px;
         text-decoration: none;
-        color: black;
     }
+
     img {
         vertical-align: middle;
     }
+
     button {
-        border-radius: 25px;
+        @include hover-button();
         background-color: $cyan;
-        color: white;
-        width: 100px;
-        height: 35px;
+        border-radius: 25px;
         border: 2px solid $cyan;
+        color: white;
+        font-family: Poppins;
+        font-weight: 700;
+        height: 35px;
+        width: 100px;
     }
+
+    .icon {
+        display: none;
+    }
+}
+
+.shortly-navbar__mobile {
+    display: none;
 }
 
 .shortly-header {
     align-items: center;
     display: flex;
     justify-content: space-between;
-    margin: 75px 0 150px 0;
+    margin: 75px 10px 150px 10px;
+
     &--info{
         margin-right: 10px;
     }
+
     h1 {
         display: inline;
-        font-family: $font;
-        font-size: 50px;
+        font-family: Poppins;
+        font-weight: 700;
     }
+
     p {
+        font-family: Poppins;
         font-size: 16px;
+        font-weight: 700;
         opacity: 0.6;
     }
+
     button {
+        @include hover-button();
         background-color: $cyan;
         border-radius: 25px;
         border: 2px solid;
         color: white;
+        font-family: Poppins;
+        font-weight: 700;
         height: 55px;
         width: 192px;
     }
+
     img {
         height: auto;
         max-width: 100%;
@@ -87,9 +173,6 @@ body{
 }
 
 .shortly-body__form{
-    position: absolute;
-    width: 100%;
-    top: -80px;
     background-color: $dark-violet;
     background-image: url("../images/bg-shorten-desktop.svg");
     border-radius: 10px;
@@ -97,41 +180,55 @@ body{
     display: flex;
     height: 160px;
     max-width: 1110px;
+    position: absolute;
+    top: -80px;
+    width: 100%;
+
     &__body {
         align-items: center;
         display: flex;
         justify-content: center;
         text-align: center;
         width: 100%;
+
         .url {
             height: 60px;
             width: 60%;
+
             .input {
                 border-radius: 7px;
                 border: 2px solid white;
                 box-sizing: border-box;
+                font-family: Poppins;
+                font-weight: 700;
                 height: 90%;
+                outline: none;
                 padding-left: 10px;
                 width: 90%;
-                outline: none;
             }
+
             .input--failed {
                 border-color: red;
             }
         }
-        .button {
+
+        .button1 {
             height: 60px;
             width: 20%;
+
             input {
+                @include hover-button();
                 background-color: $cyan;
                 border-radius: 7px;
                 border: 2px solid $cyan;
+                box-shadow: none;
                 box-sizing: border-box;
                 color: white;
+                font-family: Poppins;
+                font-weight: 700;
                 height: 90%;
-                width: 90%;
                 outline: none;
-                box-shadow: none;
+                width: 90%;
             }
         }
     }
@@ -139,88 +236,152 @@ body{
 
 .shortly-body__items-container {
     display: flex;
-    max-width: 1110px;
     flex-direction: column;
+    max-width: 1110px;
+    padding-top: 100px;
 }
 
 .shortly-body__items {
+    align-items: center;
     background-color: white;
     border-radius: 7px;
     border: 2px transparent;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    text-align: center;
     height: auto;
-    max-width: 1110px;
+    justify-content: space-between;
     margin: 25px 10px 0 10px;
+    max-width: 1110px;
+    text-align: center;
+
     .input {
         margin: 0 35px;
-        .original-link {
-        }
     }
+
     .output {
         display: flex;
+
         .shortend-link {
-            margin: 0 10px;
-            color: $cyan;
-            text-decoration: none;
             align-self: center;
+            color: $cyan;
+            font-family: Poppins;
+            font-weight: 700;
+            margin: 0 10px;
+            text-decoration: none;
         }
+
         .button {
-            margin: 0 30px;
             background-color: $cyan;
             border-radius: 7px;
             border: 2px solid $cyan;
+            box-shadow: none;
             box-sizing: border-box;
             color: white;
-            width: 100px;
+            font-family: Poppins;
+            font-weight: 700;
             height: 35px;
+            margin: 0 30px;
             outline: none;
-            box-shadow: none;
+            width: 100px;
         }
+
         .button--active {
             background-color: $dark-violet;
             border-color: $dark-violet;
         }
+
         .br {
             display: none;
         }
     }
 }
 
+.line {
+    position: relative;
+
+    hr {
+        background-color: $cyan;
+        border-color: $cyan;
+        border-width: 0;
+        height: 10px;
+        left: 150px;
+        position: absolute;
+        top: 285px;
+        width: 60%;
+    }
+}
+
 .shortly-body__info{
+    display: flex;
+    flex-direction: column;
     padding: 125px 0 120px 0;
     text-align: center;
+
     h3 {
-        font-size: 50px;
+        font: 700 50px/1 'Poppins';
     }
+
     p {
-        opacity: 0.6;
+        font-family: Poppins;
         font-size: 20px;
+        font-weight: 700;
+        opacity: 0.6;
+    }
+
+    &__items {
+        display: flex;
+        justify-content: space-evenly;
+        margin-bottom: 120px;
+
+        hr {
+            border-color: $cyan;
+            border-width: 5px;
+            z-index: 0;
+        }
+
+        .box-1 {
+            @include box();
+            @include items-margin(100px);
+        }
+
+        .box-2 {
+            @include box();
+            @include items-margin(140px);
+        }
+
+        .box-3 {
+            @include box();
+            @include items-margin(180px);
+        }
     }
 }
 
 .shortly-signup__background{
-    background-image: url("../images/bg-shorten-desktop.svg");
     background-color: $dark-violet;
+    background-image: url("../images/bg-shorten-desktop.svg");
     background-size: 100% 100%;
 }
 
 .shortly-signup {
     padding: 65px 0 50px 0;
     text-align: center;
+
     h1 {
         color: white;
+        font-family: Poppins;
+        font-weight: 700;
         margin-bottom: 30px;
     }
+
     button {
-        border-radius: 25px;
+        @include hover-button();
         background-color: $cyan;
-        color: white;
-        width: 200px;
-        height: 60px;
+        border-radius: 25px;
         border: 2px solid $cyan;
+        color: white;
+        font-family: Poppins;
+        font-weight: 700;
+        height: 60px;
+        width: 200px;
     }
 }
 
@@ -229,92 +390,244 @@ body{
 }
 
 .shortly-footer{
-    padding: 65px 0 70px 0;
     display: flex;
+    font-family: Poppins;
+    font-weight: 700;
     justify-content: space-between;
+    padding: 65px 10px 70px 10px;
+
     p {
-        margin: 0 0 1em 0;
         color: white;
         font-weight: bold;
+        margin: 0 0 1em 0;
     }
+
     a {
+        color: white;
         display: block;
+        opacity: 0.6;
         padding-bottom: 0.5em;
         text-decoration: none;
-        color: white;
-        opacity: 0.6;
     }
+
     .filter-white {
-        vertical-align: middle;
         filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(233deg) brightness(101%) contrast(104%);
+        vertical-align: middle;
     }
+
     &__features{
        display: flex;
        flex-direction: column;
        justify-content: start;
+
+       a {
+
+           &:hover {
+               color: $cyan;
+           }
+       }
     }
+
     &__resources{
         display: flex;
         flex-direction: column;
         justify-content: start;
+
+        a {
+
+            &:hover {
+                color: $cyan;
+            }
+        }
     }
+
     &__company{
        display: flex;
        flex-direction: column;
        justify-content: start;
+
+       a {
+            &:hover {
+                color: $cyan;
+            }
+        }
     }
     &__social{
         display: flex;
-        .logo {
+
+        a {
             padding : 0 10px;
+        }
+
+        .img {
+            fill: white;
+
+            &:hover {
+                fill: $cyan;
+            }
         }
     }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 700px) {
+
+    .shortly-navbar {
+
+        .hideable {
+            display: none;
+        }
+
+        .icon {
+            align-self: center;
+            display: block;
+            float: right;
+            height: 25px;
+            width: 25px;
+        }
+    }
+
+    .shortly-navbar__mobile {
+        align-items: center;
+        background-color: $dark-violet;
+        border-radius: 25px;
+        margin: 10px 10px;
+
+        .shortly-navbar__mobile__body {
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+            padding : 10px 10px;
+            text-align: center;
+
+            button {
+                background-color: $cyan;
+                border-radius: 25px;
+                border: 2px solid $cyan;
+                color: white;
+                font-family: Poppins;
+                font-size: 16px;
+                font-weight: bold;
+                height: 50px;
+                margin: 20px 0 10px 0;
+                width: 90%;
+            }
+
+            a {
+                @include hover-text();
+                color: white;
+                display: block;
+                font-family: Poppins;
+                font-weight: 700;
+                margin-top: 20px;
+                padding: 6px 12px;
+                text-decoration: none;
+            }
+
+            hr {
+                border-color: $gray;
+                margin-top: 20px;
+                width: 90%;
+            }
+        }
+    }
+
     .shortly-header{
+        align-items: center;
         flex-direction: column-reverse;
         padding : 0 10px;
         text-align: center;
-        align-items: center;
+
         &__info {
             padding: 20px 0;
         }
     }
+
     .shortly-body__form__body {
+        align-items: center;
         flex-direction: column;
         text-align: center;
-        align-items: center;
-        padding : 0 10px;
-        .url, .button{
+
+        .url, .button1{
            width: 100%;
         }
+
+        .url {
+            width: 100%;
+
+            input {
+             text-align: center;
+            }
+        }
     }
+
     .shortly-footer{
+        align-items: center;
         flex-direction: column;
         text-align: center;
-        align-items: center;
+
         &__features, &__resources, &__company, &__social {
             padding-top: 50px;
         }
     }
+
     .shortly-body__items {
         flex-direction: column;
+
         .output {
-            width: 100%;
-            align-items: center;
-            text-align: center;
             flex-direction: column;
             padding-bottom: 10px;
+            width: 100%;
+
             .button {
+                align-self: center;
                 margin-top: 10px;
+                width: 90%;
             }
+
             .br {
                 display: block;
                 width: 100%;
-               border-width: 0.5px;
-               border-color: $grayish-violet;
+                border-color: $gray;
+                border-width: 0.5px;
             }
+        }
+    }
+}
+
+@media screen and (max-width: 1120px) {
+
+    .shortly-body__info {
+        padding-left: 10px;
+        padding-right: 10px;
+
+        h3 {
+            font: 700 40px/1 'Poppins';
+        }
+
+        &__items {
+            flex-direction: column;
+            margin-bottom: 0px;
+
+            .box-1, .box-2, .box-3 {
+                width: 100%;
+                @include items-margin(90px);
+
+                .icon {
+                    left: 50%;
+                    transform: translateX(-50%);
+                }
+            }
+        }
+    }
+
+    .line {
+
+        hr {
+            height: 600px;
+            left: 50.5%;
+            position: absolute;
+            transform: translateX(-50%);
+            width: 4px;
         }
     }
 }
