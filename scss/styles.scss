@@ -388,7 +388,7 @@ body{
 .shortly-footer{
     display: flex;
     justify-content: space-between;
-    padding: 65px 10px 70px 10px;
+    padding: 65px 10px 30px 10px;
 
     p {
         color: white;
@@ -591,8 +591,7 @@ body{
 @media screen and (max-width: 1120px) {
 
     .shortly-body__info {
-        padding-left: 10px;
-        padding-right: 10px;
+        padding: 50px 10px 60px 10px;
 
         h3 {
             font: 700 40px/1 'Poppins';
