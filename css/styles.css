@@ -184,8 +184,7 @@ body {
       height: 35px;
       margin: 0 30px;
       outline: none;
-      width: 100px;
-      outline: none; }
+      width: 100px; }
     .shortly-body__items .output .button--active {
       background-color: #3b3054;
       border-color: #3b3054; }
@@ -342,10 +341,10 @@ body {
       border-color: #91f8ea; }
 
 .image--animation {
-  animation: photo 1.5s; }
+  animation: photo 1s; }
 
 .text1--animation {
-  animation: text1 1.5s; }
+  animation: text1 1s; }
 
 .slide-show__container {
   background-color: white;
@@ -417,6 +416,8 @@ body {
     .slide-show__container__btns .left-button {
       border-top-left-radius: 10px;
       border-bottom-left-radius: 10px; }
+  .slide-show__container .slide-show__container__info {
+    z-index: 2; }
   .slide-show__container .next-button {
     background-color: white;
     width: 31px;
@@ -435,13 +436,34 @@ body {
     width: 60%;
     bottom: 0;
     left: 0;
-    height: 15%; }
+    height: 8%; }
   .slide-show__container .img-bg {
     position: absolute;
     width: 390px;
     height: 370px;
     right: 200px;
-    top: 35px; }
+    top: 35px;
+    z-index: 1; }
+  .slide-show__container__mobile-buttons {
+    z-index: 0;
+    display: none;
+    justify-content: center; }
+    .slide-show__container__mobile-buttons .border {
+      border: 1px solid #bfbfbf;
+      border-radius: 50px;
+      margin-right: 5px;
+      width: 30px;
+      height: 30px; }
+      .slide-show__container__mobile-buttons .border button {
+        border: 2px solid white;
+        border-radius: 50px;
+        width: 30px;
+        height: 30px;
+        background-color: white;
+        outline: none; }
+
+.button--active {
+  background-color: #bfbfbf !important; }
 
 .shortly-footer__background {
   background-color: #232127; }
@@ -651,55 +673,17 @@ body {
       width: 60px;
       height: 50px;
       max-width: 100%;
-      top: -190px; }
+      top: -220px; }
     .slide-show__container__btns {
-      background-color: white;
-      border-color: white;
-      border-radius: 20px;
-      width: 80px;
-      height: 40px;
-      position: relative;
-      z-index: 2;
-      top: -328px;
-      left: 50%;
-      transform: translateX(-50%); }
-      .slide-show__container__btns button {
-        border: 0px;
-        width: 37px;
-        height: 40px;
-        padding: 0;
-        background-color: white;
-        outline: none; }
-        .slide-show__container__btns button :hover {
-          background-color: #bfbfbf; }
-        .slide-show__container__btns button img {
-          width: 8px;
-          height: 12px;
-          margin-top: 2px; }
-      .slide-show__container__btns .right-button {
-        border-top-right-radius: 20px;
-        border-bottom-right-radius: 20px; }
-      .slide-show__container__btns .left-button {
-        border-top-left-radius: 20px;
-        border-bottom-left-radius: 20px; }
-    .slide-show__container .next-button {
-      background-color: white;
-      width: 31px;
-      height: 30px;
-      border-color: white;
-      border-top-left-radius: 10px;
-      border-bottom-left-radius: 10px; }
-    .slide-show__container .prev-button {
-      width: 31px;
-      height: 30px;
-      border: 0px;
-      border-top-right-radius: 10px;
-      border-bottom-right-radius: 10px; }
+      display: none; }
     .slide-show__container .img-bg {
       width: 300px;
       height: 300px;
       right: 50%;
       top: 4%;
-      transform: translateX(50%); } }
+      transform: translateX(50%); }
+    .slide-show__container__mobile-buttons {
+      display: flex;
+      padding-bottom: 20px; } }
 
 /*# sourceMappingURL=styles.css.map */

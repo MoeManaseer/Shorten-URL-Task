@@ -308,7 +308,6 @@ body{
             margin: 0 30px;
             outline: none;
             width: 100px;
-            outline: none;
         }
 
         .button--active {
@@ -410,11 +409,11 @@ body{
 }
 
 .image--animation {
-    animation: photo 1.5s;
+    animation: photo 1s;
 }
 
 .text1--animation {
-    animation: text1 1.5s;
+    animation: text1 1s;
 }
 
 .slide-show__container {
@@ -509,6 +508,10 @@ body{
         }
     }
 
+    .slide-show__container__info {
+        z-index: 2;
+    }
+
     .next-button {
         background-color: white;
         width: 31px;
@@ -534,7 +537,7 @@ body{
             width: 60%;
             bottom: 0;
             left: 0;
-            height: 15%;
+            height: 8%;
         }
     }
 
@@ -544,7 +547,34 @@ body{
         height: 370px;
         right: 200px;
         top: 35px;
+        z-index: 1;
     }
+
+    &__mobile-buttons{
+        z-index: 0;
+        display: none;
+        justify-content: center;
+        .border {
+            border: 1px solid $gray;
+            border-radius: 50px;
+            margin-right: 5px;
+            width: 30px;
+            height: 30px;
+            button {
+                border: 2px solid white;
+                border-radius: 50px;
+                width: 30px;
+                height: 30px;
+                background-color: white;
+                outline: none;
+            }
+        }
+    }
+}
+
+
+.button--active {
+    background-color: $gray !important;
 }
 
 .shortly-footer__background{
@@ -857,68 +887,12 @@ body{
             width: 60px;
             height: 50px;
             max-width: 100%;
-            top: -190px;
+            top: -220px;
         }
 
         &__btns {
-            background-color: white;
-            border-color: white;
-            border-radius: 20px;
-            width: 80px;
-            height: 40px;
-            position: relative;
-            z-index: 2;
-            top: -328px;
-            left: 50%;
-            transform: translateX(-50%);
-            button {
-                border: 0px;
-                width: 37px;
-                height: 40px;
-                padding: 0;
-                background-color: white;
-                outline: none;
-                :hover {
-                    background-color: $gray;
-                }
-                img {
-                    width: 8px;
-                    height: 12px;
-                    margin-top: 2px;
-                }
-            }
-
-            .right-button {
-                border-top-right-radius: 20px;
-                border-bottom-right-radius: 20px;
-            }
-            .left-button {
-                border-top-left-radius: 20px;
-                border-bottom-left-radius: 20px;
-            }
+            display: none;
         }
-
-        .next-button {
-            background-color: white;
-            width: 31px;
-            height: 30px;
-            border-color: white;
-            border-top-left-radius: 10px;
-            border-bottom-left-radius: 10px;
-            .next-button-arrow {
-            }
-        }
-
-        .prev-button {
-            width: 31px;
-            height: 30px;
-            border: 0px;
-            border-top-right-radius: 10px;
-            border-bottom-right-radius: 10px;
-            .prev-button-arrow {
-            }
-        }
-
 
         .img-bg {
             width: 300px;
@@ -926,6 +900,11 @@ body{
             right: 50%;
             top: 4%;
             transform: translateX(50%);
+        }
+
+        &__mobile-buttons {
+            display: flex;
+            padding-bottom: 20px;
         }
     }
 }

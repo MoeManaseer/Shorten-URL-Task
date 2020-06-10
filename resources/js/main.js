@@ -5,9 +5,44 @@ let photos = document.querySelectorAll(".slide-show__container__info .image");
 let textJob = document.querySelectorAll(".slide-show__container__info__text .job");
 let textQuote = document.querySelectorAll(".slide-show__container__info__text .quote");
 let textName = document.querySelectorAll(".slide-show__container__info__text .name");
+let mobileButtons = document.querySelectorAll(".slide-show__container__mobile-buttons .border button");
 let slideItemSize = slideItem.length;
+let initialClickX;
+let finishClickX;
+let currentX;
 
 moveSlide(0);
+
+slideItem.forEach((item) => {
+    item.addEventListener("touchstart", (event) => {
+        initialClickX = event.touches[0].clientX;
+        currentX = initialClickX;
+    });
+    item.addEventListener("touchend", (event) => {
+        finishClickX = event.changedTouches[0].clientX;
+        touchSlideMobile();
+    });
+    item.addEventListener("touchmove", (event) => {
+        // slideItem[slideItemNumber].style.transform = "translateX(" + (currentX - event.touches[0].clientX ) +")";
+        slideItem[slideItemNumber].style.transform = `translateX(${(initialClickX - event.touches[0].clientX )}px)`;
+        console.log("translateX(" + (event.touches[0].clientX - currentX ) +")");
+        console.log(currentX);
+        currentX = event.touches[0].clientX;
+    });
+})
+
+function touchSlideMobile() {
+    const way = initialClickX - finishClickX;
+    if (Math.abs(way) > window.innerWidth / 4) {
+        if (way > 0) {
+            moveSlide(1);
+        } else {
+            moveSlide(-1);
+        }
+    } else {
+        slideItem[slideItemNumber].style.transform = "translateX(0)";
+    }
+}
 
 function moveSlide (x) {
     let i = 0;
@@ -17,17 +52,22 @@ function moveSlide (x) {
     }
     for (;i<slideItemSize;i++){
         slideItem[i].style.display = "none";
-        console.log(slideItem[i]);
+        mobileButtons[i].classList.remove("button--active");
     }
-    console.log("end of click");
-    slideItem[slideItemNumber].style.display = "flex";
-    console.log(photos[slideItemNumber].className);
+    console.log(slideItemNumber);
     
+    slideItem[slideItemNumber].style.display = "flex";
     photos[slideItemNumber].classList.add("image--animation");
     textJob[slideItemNumber].classList.add("text1--animation");
     textName[slideItemNumber].classList.add("text1--animation");
     textQuote[slideItemNumber].classList.add("text1--animation");
-    
+    mobileButtons[slideItemNumber].classList.toggle("button--active");
+    slideItem[slideItemNumber].style.transform = "translateX(0)";
+}
+
+function moveSlideMobile (item) {
+    slideItemNumber = item;
+    moveSlide(0);
 }
 
 function copyLink(id) {
