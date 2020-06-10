@@ -1,4 +1,24 @@
 let itemNumber = 0;
+let slideItemNumber = 0;
+let slideItem = document.querySelectorAll(".slide-show__container__info");
+let slideItemSize = slideItem.length;
+
+moveSlide(0);
+
+function moveSlide (x) {
+    let i = 0;
+    slideItemNumber = (slideItemNumber+x)%2;
+    if (slideItemNumber === -1){
+        slideItemNumber = 1;
+    }
+    for (;i<slideItemSize;i++){
+        slideItem[i].style.display = "none";
+        console.log(slideItem[i]);
+    }
+    console.log("end of click");
+    slideItem[slideItemNumber].style.display = "flex";
+
+}
 
 function copyLink(id) {
     let button = document.getElementById(id.target.id);
