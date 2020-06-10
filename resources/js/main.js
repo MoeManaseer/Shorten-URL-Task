@@ -24,7 +24,7 @@ slideItem.forEach((item) => {
     });
     item.addEventListener("touchmove", (event) => {
         // slideItem[slideItemNumber].style.transform = "translateX(" + (currentX - event.touches[0].clientX ) +")";
-        slideItem[slideItemNumber].style.transform = `translateX(${(initialClickX - event.touches[0].clientX )}px)`;
+        slideItem[slideItemNumber].style.transform = `translateX(${(event.touches[0].clientX - initialClickX )}px)`;
         console.log("translateX(" + (event.touches[0].clientX - currentX ) +")");
         console.log(currentX);
         currentX = event.touches[0].clientX;
