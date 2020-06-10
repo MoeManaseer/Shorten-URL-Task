@@ -1,5 +1,20 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap");
+@keyframes photo {
+  0% {
+    right: -50vw; }
+  100% {
+    right: 100px; } }
+@keyframes text1 {
+  0% {
+    left: -50vw; }
+  100% {
+    left: 0; } }
+@keyframes photo-mobile {
+  0% {
+    right: -50vw; }
+  100% {
+    right: 0; } }
 body {
   margin: 0px; }
 
@@ -326,6 +341,12 @@ body {
       background-color: #91f8ea;
       border-color: #91f8ea; }
 
+.image--animation {
+  animation: photo 1.5s; }
+
+.text1--animation {
+  animation: text1 1.5s; }
+
 .slide-show__container {
   background-color: white;
   width: 815px;
@@ -348,14 +369,17 @@ body {
       z-index: 3;
       padding: 160px 30px 0 60px; }
       .slide-show__container__info__text .quote {
-        font: 400 15px/1 "Inter"; }
+        font: 400 15px/1 "Inter";
+        position: relative; }
       .slide-show__container__info__text .person-info {
         display: flex; }
         .slide-show__container__info__text .person-info .name {
           padding-right: 20px;
-          font: 700 15px/1 "Inter"; }
+          font: 700 15px/1 "Inter";
+          position: relative; }
         .slide-show__container__info__text .person-info .job {
-          font: 200 15px/1 "Inter"; }
+          font: 200 15px/1 "Inter";
+          position: relative; }
   .slide-show__container .text-quotes {
     position: relative;
     left: 105px;
@@ -578,6 +602,9 @@ body {
     transform: translateX(-50%);
     width: 4px; } }
 @media screen and (max-width: 1040px) {
+  .image--animation {
+    animation: photo-mobile 1s; }
+
   .slide-show__container {
     background-color: white;
     max-width: 100%;

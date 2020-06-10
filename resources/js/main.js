@@ -1,6 +1,10 @@
 let itemNumber = 0;
 let slideItemNumber = 0;
 let slideItem = document.querySelectorAll(".slide-show__container__info");
+let photos = document.querySelectorAll(".slide-show__container__info .image");
+let textJob = document.querySelectorAll(".slide-show__container__info__text .job");
+let textQuote = document.querySelectorAll(".slide-show__container__info__text .quote");
+let textName = document.querySelectorAll(".slide-show__container__info__text .name");
 let slideItemSize = slideItem.length;
 
 moveSlide(0);
@@ -17,7 +21,13 @@ function moveSlide (x) {
     }
     console.log("end of click");
     slideItem[slideItemNumber].style.display = "flex";
-
+    console.log(photos[slideItemNumber].className);
+    
+    photos[slideItemNumber].classList.add("image--animation");
+    textJob[slideItemNumber].classList.add("text1--animation");
+    textName[slideItemNumber].classList.add("text1--animation");
+    textQuote[slideItemNumber].classList.add("text1--animation");
+    
 }
 
 function copyLink(id) {

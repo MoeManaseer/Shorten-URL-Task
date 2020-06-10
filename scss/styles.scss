@@ -69,6 +69,34 @@ $font : 'Poppins', serif;
     }
 }
 
+@keyframes photo {
+    0% {
+        right: -50vw;
+    }
+    100% {
+        right: 100px;
+    }
+}
+
+@keyframes text1 {
+    0% {
+        left: -50vw;
+    }
+    100% {
+        left: 0;
+    }
+}
+
+@keyframes photo-mobile {
+    0% {
+        right: -50vw;
+    }
+    100% {
+        right: 0;
+    }
+}
+
+
 body{
     margin: 0px;
 }
@@ -381,6 +409,14 @@ body{
     }
 }
 
+.image--animation {
+    animation: photo 1.5s;
+}
+
+.text1--animation {
+    animation: text1 1.5s;
+}
+
 .slide-show__container {
     background-color: white;
     width: 815px;
@@ -408,6 +444,7 @@ body{
             padding: 160px 30px 0 60px;
             .quote {
                 font: 400 15px/1 "Inter";
+                position: relative;
             }
 
             .person-info {
@@ -415,10 +452,12 @@ body{
                 .name {
                     padding-right: 20px;
                     font: 700 15px/1 "Inter";
+                    position: relative;
                 }
 
                 .job {
                     font: 200 15px/1 "Inter";
+                    position: relative;
                 }
             }
         }
@@ -754,6 +793,11 @@ body{
 }
 
 @media screen and (max-width: 1040px) {
+
+    .image--animation {
+        animation: photo-mobile 1s;
+    }
+
     .slide-show__container {
         background-color: white;
         max-width: 100%;
