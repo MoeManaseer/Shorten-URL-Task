@@ -10,6 +10,7 @@ $grayish-violet : hsl(257, 7%, 63%);
 $red : hsl(0, 87%, 67%);
 $very-dark-violet : hsl(260, 8%, 14%);
 $font : 'Poppins', serif;
+$dark-mode-color : hsl(220, 26%, 14%);
 
 @mixin hover-button {
     &:hover {
@@ -660,8 +661,135 @@ body{
         }
     }
 }
+.dark-mode__splitter {
+    display:none;
+}
+.dark-mode__button {
+    right: 5%;
+    bottom: 5%;
+    position: fixed;
+    border-radius: 50px;
+    width: 35px;
+    height: 35px;
+    z-index: 5;
+    border: 2px solid $dark-mode-color;
+    outline: none;
+    &__icon {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 24px;
+        height: 24px;
+    }
+}
+.body--dark-mode {
+    background-color: $dark-mode-color;
+    .shortly-header {
+        color: white;
+        button {
+            border-color: $cyan;
+            background-color: $dark-mode-color;
+        }
+    }
+    .shortly-navbar__mobile {
+        background-color:$dark-mode-color;
+        &__body {
+            button {
+                background-color: $dark-mode-color !important;
+            }
+        }
+    }
+    .shortly-navbar {
+        button {
+            background-color: $dark-mode-color;
+        }
+
+        img {
+            filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(233deg) brightness(101%) contrast(104%);
+        }
+        a {
+            color: white;
+        }
+    }
+    .shortly-footer__background {
+        background-color:$dark-mode-color;
+    }
+
+    .slide-show__container {
+        background-color: hsl(220, 26%, 14%);
+        color: white;
+        .container-bg {
+            display: none;
+        }
+    }
+
+    .shortly-body__info {
+        background-color: hsl(220, 26%, 14%);
+        color: white;
+        &__items {
+            .box-1 {
+                background-color: $dark-mode-color;
+                border-color: black;
+                border-width: 4px;
+            }
+            .box-2 {
+                background-color: $dark-mode-color;
+                border-color: black;
+                border-width: 4px;
+
+            }
+            .box-3 {
+                background-color:$dark-mode-color;
+                border-color: black;
+                border-width: 4px;
+
+            }
+        }
+
+        .line {
+            hr {
+                background-color: black;
+                border-color: black;
+                width: 2px;
+            }
+        }
+    }
+    .shortly-body__background {
+        background-color: hsl(220, 26%, 14%);
+    }
+    .dark-mode__splitter {
+        display:block;
+        border: 0.5px solid #bfbfbf;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .shortly-signup {
+        button {
+            background-color: $dark-mode-color;
+        }
+    }
+    
+    .shortly-body__form {
+        &__body {
+            .button {
+                background-color: $dark-mode-color;
+            }
+        }
+    }
+}
 
 @media screen and (max-width: 700px) {
+
+    .dark-mode__splitter  {
+        width: 90%;
+    }
+
+    .dark-mode__button {
+        right: 3%;
+        bottom: 3%;
+    }
 
     .shortly-navbar {
 

@@ -513,7 +513,90 @@ body {
       .shortly-footer__social .img:hover {
         fill: #2acfcf; }
 
+.dark-mode__splitter {
+  display: none; }
+
+.dark-mode__button {
+  right: 5%;
+  bottom: 5%;
+  position: fixed;
+  border-radius: 50px;
+  width: 35px;
+  height: 35px;
+  z-index: 5;
+  border: 2px solid #1a212d;
+  outline: none; }
+  .dark-mode__button__icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 24px;
+    height: 24px; }
+
+.body--dark-mode {
+  background-color: #1a212d; }
+  .body--dark-mode .shortly-header {
+    color: white; }
+    .body--dark-mode .shortly-header button {
+      border-color: #2acfcf;
+      background-color: #1a212d; }
+  .body--dark-mode .shortly-navbar__mobile {
+    background-color: #1a212d; }
+    .body--dark-mode .shortly-navbar__mobile__body button {
+      background-color: #1a212d !important; }
+  .body--dark-mode .shortly-navbar button {
+    background-color: #1a212d; }
+  .body--dark-mode .shortly-navbar img {
+    filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(233deg) brightness(101%) contrast(104%); }
+  .body--dark-mode .shortly-navbar a {
+    color: white; }
+  .body--dark-mode .shortly-footer__background {
+    background-color: #1a212d; }
+  .body--dark-mode .slide-show__container {
+    background-color: #1a212d;
+    color: white; }
+    .body--dark-mode .slide-show__container .container-bg {
+      display: none; }
+  .body--dark-mode .shortly-body__info {
+    background-color: #1a212d;
+    color: white; }
+    .body--dark-mode .shortly-body__info__items .box-1 {
+      background-color: #1a212d;
+      border-color: black;
+      border-width: 4px; }
+    .body--dark-mode .shortly-body__info__items .box-2 {
+      background-color: #1a212d;
+      border-color: black;
+      border-width: 4px; }
+    .body--dark-mode .shortly-body__info__items .box-3 {
+      background-color: #1a212d;
+      border-color: black;
+      border-width: 4px; }
+    .body--dark-mode .shortly-body__info .line hr {
+      background-color: black;
+      border-color: black;
+      width: 2px; }
+  .body--dark-mode .shortly-body__background {
+    background-color: #1a212d; }
+  .body--dark-mode .dark-mode__splitter {
+    display: block;
+    border: 0.5px solid #bfbfbf;
+    width: 100%;
+    margin: 0 auto; }
+  .body--dark-mode .shortly-signup button {
+    background-color: #1a212d; }
+  .body--dark-mode .shortly-body__form__body .button {
+    background-color: #1a212d; }
+
 @media screen and (max-width: 700px) {
+  .dark-mode__splitter {
+    width: 90%; }
+
+  .dark-mode__button {
+    right: 3%;
+    bottom: 3%; }
+
   .shortly-navbar .hideable {
     display: none; }
   .shortly-navbar .icon {

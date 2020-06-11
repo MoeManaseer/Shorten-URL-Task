@@ -10,6 +10,7 @@ let slideItemSize = slideItem.length;
 let initialClickX;
 let finishClickX;
 let currentX;
+let darkModeBtn = document.querySelector(".dark-mode__button");
 
 moveSlide(0);
 
@@ -27,6 +28,10 @@ slideItem.forEach((item) => {
         currentX = event.touches[0].clientX;
     });
 })
+
+darkModeBtn.addEventListener("click", (event) => {
+    document.querySelector("body").classList.toggle("body--dark-mode");
+});
 
 function touchSlideMobile() {
     const way = initialClickX - finishClickX;
