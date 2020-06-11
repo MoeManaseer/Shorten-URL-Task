@@ -23,10 +23,7 @@ slideItem.forEach((item) => {
         touchSlideMobile();
     });
     item.addEventListener("touchmove", (event) => {
-        // slideItem[slideItemNumber].style.transform = "translateX(" + (currentX - event.touches[0].clientX ) +")";
         slideItem[slideItemNumber].style.transform = `translateX(${(event.touches[0].clientX - initialClickX )}px)`;
-        console.log("translateX(" + (event.touches[0].clientX - currentX ) +")");
-        console.log(currentX);
         currentX = event.touches[0].clientX;
     });
 })
@@ -54,8 +51,6 @@ function moveSlide (x) {
         slideItem[i].style.display = "none";
         mobileButtons[i].classList.remove("button--active");
     }
-    console.log(slideItemNumber);
-    
     slideItem[slideItemNumber].style.display = "flex";
     photos[slideItemNumber].classList.add("image--animation");
     textJob[slideItemNumber].classList.add("text1--animation");
@@ -184,7 +179,7 @@ function makeShortendUrl(length) {
         console.log("something bad happend");
         console.log(e);
     });
-    console.log(req.body);
+
 
  }
 
@@ -195,5 +190,4 @@ function makeShortendUrl(length) {
     } else {
         navBar.style["display"] = "none";
     }
-    console.log(navBar);
  }
